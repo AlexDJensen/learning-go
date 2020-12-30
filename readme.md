@@ -12,4 +12,5 @@ Only some folders have been included at this point though.
 ---
 * Each repo has a git-named `go mod init github.com/AlexDJensen/project` call at the root.
 * Create a folder for each thing I want to do (or put them in a cmd folder?, and create a `go mod init <whatever>` for them. Add a replace statement for each package it needs (to point to local))
-* run `go mod init <whatever, not github>`
+* run `go mod init <whatever, not github>` in each pkg subfolder.
+* The cmd subfolders should have a line like this (`replace github.com/AlexDJensen/project/pkg/package_name => ../pkg/package_name`) for each package in the go.mod file.
